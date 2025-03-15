@@ -30,7 +30,7 @@ jobs:
 
       
     - name: Copy to Remote Server
-      uses: pierrickdelrieu/scp-action@latest
+      uses: pierrickdelrieu/scp-action@v0.1.0
       with:
         host: ${{ secrets.DESTINATION_HOST }}
         ssh_port: ${{ secrets.DESTINATION_SSH_PORT }}
