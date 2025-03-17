@@ -34,3 +34,13 @@ jobs:
         port: ${{ secrets.PORT }}
         source: "./*"
         target: "/var/tapple/workspace/devops-tapple-env-deploy/"
+
+        
+      - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: /var/tapple/pm2_scripts/tapple-env-deploy.config.js
