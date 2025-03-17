@@ -43,5 +43,5 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-            cd /var/tapple/pm2-scripts/              # Change to your app directory
-            pm2 restart tapple-env-deploy.config.js            # Replace with your PM2 app name        
+            cd /var/tapple/pm2-scripts/              
+            pm2 restart tapple-env-deploy.config.js       
