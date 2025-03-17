@@ -36,7 +36,7 @@ jobs:
         target: "/var/tapple/workspace/devops-tapple-env-deploy/"
 
         
-      - name: executing remote ssh commands using password
+    - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@v1
       with:
         host: ${{ secrets.HOST }}
