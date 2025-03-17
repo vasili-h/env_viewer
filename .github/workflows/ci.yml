@@ -42,5 +42,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
-        script_path: /var/tapple/pm2-scripts/
-        script: tapple-env-deploy.config.js
+        script_path: /var/tapple/pm2-scripts/tapple-env-deploy.config.js
