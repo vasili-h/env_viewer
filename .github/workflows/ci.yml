@@ -34,13 +34,12 @@ jobs:
         port: ${{ secrets.PORT }}
         source: "./*"
         target: "/var/tapple/workspace/devops-tapple-env-deploy/"
-
-        
+      
     - name: executing remote ssh commands using ssh key
-    uses: appleboy/ssh-action@v1
-    with:
-      host: ${{ secrets.HOST }}
-      username: ${{ secrets.USERNAME }}
-      key: ${{ secrets.KEY }}
-      port: ${{ secrets.PORT }}
-      script: /var/tapple/pm2_scripts/tapple-env-deploy.config.js
+      uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: /var/tapple/pm2_scripts/tapple-env-deploy.config.js
